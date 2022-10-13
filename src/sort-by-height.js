@@ -11,9 +11,19 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  * The result should be [-1, 150, 160, 170, -1, -1, 180, 190]
  */
-function sortByHeight(/* arr */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+const sortByHeight = arr => {
+  const indexes = [];
+  const numbers = [];
+  arr.forEach((el, i) => {
+    if (el !== -1) {
+      indexes.push(i);
+      numbers.push(el);
+    }
+  })
+  numbers.sort((a, b) => a - b).forEach((el, i) => {
+    arr[indexes[i]] = el;
+  })
+  return arr;
 }
 
 module.exports = {
