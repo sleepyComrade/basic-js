@@ -32,16 +32,3 @@ class DepthCalculator {
 module.exports = {
   DepthCalculator
 };
-
-
-
-    // let nestCount = 0;
-    // arr.forEach(el => {
-    //   if (Array.isArray(el)) {
-    //     nestCount++;
-    //     count += this.calculateDepth(el);
-    //   }
-    // })
-    // if (nestCount > 0) {
-    //   return count;
-    // }
